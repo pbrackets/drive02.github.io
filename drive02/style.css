@@ -1,0 +1,19 @@
+
+div{
+    border: blue 1px dashed;
+}
+
+header-mobil li{
+    list-style: none;
+}
+
+.header-mobil{
+    display: flex;
+}
+.logo{
+    width: 200px;
+}
+.header-mobil li {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
