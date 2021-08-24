@@ -15,4 +15,5 @@ div{
     flex-wrap: nowrap;
     justify-content: flex-end;
     list-style: none;
+    text-align:center;
 }
