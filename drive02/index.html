@@ -6,14 +6,30 @@
 
 <html>
 <body>
+<style>
+    .fix {
+        display: flex;
+        position: fixed; /* Фиксированное положение */
+        right: 0; /* Расстояние от правого края окна браузера */
+        left:0;
+        top: 95%; /* Расстояние сверху */
+        bottom:0;
+        background: white; /* Цвет фона */
+        border: 1px solid #333; /* Параметры рамки */
+    }
+    .text {
+        height: 1000px;
+    }
+</style>
+
 <header>
     <nav>
         <div class="main-menu">
             <ul class="header-mobil">
-                <li><img class="logo" src="img/logo.png"></li>
-                <li> Категории</li>
-                <li>Цены</li>
-                <li>Контакты</li>
+                <li><img class="logo" src="logo.png"></li>
+                <li class="bottom-menu"> <p>Категории</p></li>
+                <li class="bottom-menu"><p>Цены</p></li>
+                <li class="bottom-menu"><p>Контакты</p></li>
             </ul>
         </div>
     </nav>
@@ -90,7 +106,7 @@
     </section>
 
 <aside>
-    <div class="aside link block">
+    <div class="aside-link-block fix">
         <div class="container">
             <a class="link-city-tel-number" href="tel:83472664056">8(347)266-40-56</a>
             <a class="link-whatsapp-tel-number" href="tel:9174828438">
