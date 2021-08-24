@@ -1,9 +1,9 @@
 
 div{
-    border: blue 1px dashed;
+    border: grey 1px dashed;
 }
 
-header-mobil li{
+main-menu li{
     list-style: none;
 }
 
