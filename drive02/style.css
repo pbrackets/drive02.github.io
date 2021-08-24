@@ -3,10 +3,6 @@ div{
     border: grey 1px dashed;
 }
 
-main-menu li{
-    list-style: none;
-}
-
 .header-mobil{
     display: flex;
 }
@@ -17,4 +13,5 @@ main-menu li{
     width:100%;
     flex-wrap: nowrap;
     justify-content: flex-end;
+    list-style: none;
 }
