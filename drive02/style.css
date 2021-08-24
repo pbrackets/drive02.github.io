@@ -16,5 +16,5 @@ main-menu li{
 .header-mobil li {
     width:100%;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
