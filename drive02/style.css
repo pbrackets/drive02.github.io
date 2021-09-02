@@ -3,66 +3,206 @@ html, body {
     width: 100%;
 }
 html {
-    font-size: 36px;
+    font-size: 25px;
 }
+@media (-webkit-max-device-pixel-ratio: 1.5) {
+    html {
+        font-size: 10px;
+
+    }
+    .aside-link-block{
+        display: none;
+    }
+}
+@media  (max-resolution: 1.5dppx) {
+    html {
+        font-size: 10px;
+    }
+    .aside-link-block{
+        display: none;
+    }
+
+}
+
+/*
 div{
     border: grey 1px dashed;
     margin:5px;
+}*/
+
+a {
+    text-decoration-line: none;
+    color: black;
 }
 
 .main-menu{
     width: 100%;
     margin: 0;
 }
-.header-mobil{
+.header{
     display: flex;
-   padding: 0;
-    width: 100%;
-    background-color: #F5F5F5F5;
-}
-.logo{
-    justify-content: flex-start;
-    width: 100%;
-}
-.header-mobil li {
-    width:100%;
     flex-wrap: nowrap;
     justify-content: flex-end;
+    width: 100%;
+    background-color: #F5F5F5F5;
+    padding: 0.5rem;
+}
+.header li{
     list-style: none;
-    text-align:center;
-    font-size: 1rem;
+    font-size: 1.8rem;
+    margin: 0 1.2rem;
+}
+.categories::before{
+    content: "";
+    position: absolute;
+    width: 10.6rem;
+    height: 6rem;
+    left: 0;
+    top: 0.7rem;
+    background-size: contain;
+    background-image: url("logo-white.png");
+    background-repeat: no-repeat;
 }
 
+
+.page {
+    margin: 7rem 3rem 7rem 3rem;
+    height: auto;
+}
+.page h1 {
+    text-align: center;
+    font-size: 2.4rem;
+}
 .main-image{
     text-align: center;
 
 }
+.practice-and-theory p {
+    /*text-align: center;*/
+    align-items: center;
+}
+.groups li {
+    list-style: none;
 
+}
+.groups li::before{
+    content: ">" ;
+}
+
+.cost-of-training li{
+    list-style: none;
+    padding: 0;
+}
+.cost-of-training li::before{
+    content: ">";
+}
+.aside-link-block{
+    padding: 0.4rem;
+}
 .container {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    justify-content: space-between;
+    height: 3rem;
+    justify-content: flex-start;
+    margin-left: 3rem;
+}
+.container li {
+    list-style: none;
+    font-size: 1.8rem;
+    margin: 0.4rem 1rem 0 1rem;
 }
 
-main p {
-    font-size: 1rem;
+.link-whatsapp-tel-number::before{
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: 0;
+    top: 0.3rem;
+    background-size: contain;
+    background-image: url("logo-whatsapp.jpg");
+    background-repeat: no-repeat;
+}
+.link-whatsapp-tel-number::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    width: 0.2rem;
+    height: 100%;
+    background-color: #eaeaea;
 }
 
-.fix {
-
-    position: fixed; /* Фиксированное положение */
-    right: 0; /* Расстояние от правого края окна браузера */
-    left:0;
-    top: 95%; /* Расстояние сверху */
-    bottom:0;
-    background: white; /* Цвет фона */
+.link-city-tel-number::before{
+    content: "";
+    position: absolute;
+    width: 2.6rem;
+    height: 2.6rem;
+    left: 3.5rem;
+    top: 0.5rem;
+    background-size: contain;
+    background-image: url("logo-tell.png");
+    background-repeat: no-repeat;
+}
+.link-city-tel-number::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 19rem;
+    transform: translateY(-50%);
+    width: 0.2rem;
+    height: 100%;
+    background-color: #eaeaea;
+}
+.link-application::after {
+    content: "";
+    width: 2.5rem;
+    height: 2rem;
+    background-image: url("logo-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    right: 2.5rem;
+    top: 55%;
+    transform: translateY(-50%);
+    transition: ease .2s;
+    background-color: initial;
+    z-index: 1;
+}
+.right-velvet-icon {
+    display: inline-block;
+    position: relative;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background-color: #007dff;
+    vertical-align: middle;
+    transition: ease .2s;
+    margin-left: 2rem;
+    background-image: initial;
+}
+main {
+    font-size: 1.6rem;
+}
+/* Фиксированное положение меню сверху*/
+.fixed {
+    position: fixed;
+    top:0;
+    z-index: 10;
+    overflow: hidden;
+    margin: 0;
+    background: white;
     border: 1px solid #333; /* Параметры рамки */
 }
-.fixed {
-    position: fixed; /* Фиксированное положение */
-    top:0;
-
-
+/* Фиксированное положение меню снизу */
+.fix {
+    position: fixed;
+    right: 0; /* Расстояние от правого края окна браузера */
+    left:0;
+    bottom:0;
+    background: white; /* Цвет фона */
     border: 1px solid #333; /* Параметры рамки */
 }
