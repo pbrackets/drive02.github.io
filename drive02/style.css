@@ -5,6 +5,9 @@ html, body {
 html {
     font-size: 25px;
 }
+body {
+    font-family: "PTSansRegular", Arial, sans-serif;
+}
 @media (-webkit-max-device-pixel-ratio: 1.5) {
     html {
         font-size: 10px;
@@ -12,6 +15,17 @@ html {
     }
     .aside-link-block{
         display: none;
+    }
+    .sign-up{
+        display: block;
+    }
+    .welcome{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    .welcome-image{
+        order: 10;
     }
 }
 @media  (max-resolution: 1.5dppx) {
@@ -21,24 +35,34 @@ html {
     .aside-link-block{
         display: none;
     }
-
+    .sign-up{
+        display: block;
+    }
+    .welcome{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    .welcome-image{
+        order: 10;
+    }
 }
 
-/*
-div{
-    border: grey 1px dashed;
-    margin:5px;
-}*/
+
 
 a {
     text-decoration-line: none;
     color: black;
+}
+main {
+    font-size: 1.6rem;
 }
 
 .main-menu{
     width: 100%;
     margin: 0;
 }
+
 .header{
     display: flex;
     flex-wrap: nowrap;
@@ -66,19 +90,78 @@ a {
 
 
 .page {
-    margin: 7rem 3rem 7rem 3rem;
+    margin: 8rem 3rem 7rem 3rem;
     height: auto;
+
+
 }
 .page h1 {
     text-align: center;
     font-size: 2.4rem;
+    margin-bottom: 0;
 }
-.main-image{
+.page p {
+    margin: 0;
+}
+.welcome{
+
     text-align: center;
 
+
 }
+.site-image{
+    width: 23.5rem;
+}
+.welcome-highlights h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 1rem 0 0 3rem;
+}
+.welcome-highlights p {
+    text-align: left;
+    margin: 0 0 0 3rem ;
+}
+.welcome-highlight{
+    position: relative;
+}
+.icon-planet::before{
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: 0;
+    top: calc(50% - 1rem);
+    background-size: contain;
+    background-image: url("planet.svg");
+    background-repeat: no-repeat;
+}
+.icon-bag::before{
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: 0;
+    top: calc(50% - 1rem);
+    background-size: contain;
+    background-image: url("bag.svg");
+    background-repeat: no-repeat;
+}
+.icon-camera::before{
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: 0;
+    top: calc(50% - 1rem);
+    background-size: contain;
+    background-image: url("icon-camera.svg");
+    background-repeat: no-repeat;
+}
+
+
+
 .practice-and-theory p {
-    /*text-align: center;*/
+    text-align: center;
     align-items: center;
 }
 .groups li {
@@ -95,6 +178,9 @@ a {
 }
 .cost-of-training li::before{
     content: ">";
+}
+.our-advantages{
+    text-align: left;
 }
 .aside-link-block{
     padding: 0.4rem;
@@ -184,9 +270,7 @@ a {
     margin-left: 2rem;
     background-image: initial;
 }
-main {
-    font-size: 1.6rem;
-}
+
 /* Фиксированное положение меню сверху*/
 .fixed {
     position: fixed;
@@ -205,4 +289,8 @@ main {
     bottom:0;
     background: white; /* Цвет фона */
     border: 1px solid #333; /* Параметры рамки */
+}
+
+.sign-up{
+    display: none;
 }
