@@ -19,7 +19,7 @@ a {
 }
 
 main {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 main section:not(:first-child){
     margin-top: 5rem;
@@ -28,6 +28,7 @@ main section:not(:first-child){
 .main-menu {
     width: 100%;
     margin: 0;
+    box-shadow: 0 1.5rem 0.5rem -1rem rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -37,13 +38,25 @@ main section:not(:first-child){
     width: 100%;
     background-color: #F5F5F5F5;
     padding: 0.5rem;
-    box-shadow: 0 1.5rem 0.5rem -1rem rgba(0, 0, 0, 0.1);
+
 }
 
 .header li {
     list-style: none;
     font-size: 1.5rem;
-    margin: 0 1.2rem;
+    margin: 0 0 0 1.2rem;
+    padding-right: 1.2rem;
+    position: relative;
+}
+.header li:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 0.2rem;
+    height: 50%;
+    background-color: #eaeaea;
 }
 
 .header::before {
@@ -59,27 +72,29 @@ main section:not(:first-child){
 }
 
 
-.page {
+
+.page-block {
+    display: flex;
     margin: 8rem 3rem 7rem 3rem;
     height: auto;
 }
-
-.page h1 {
+.page-block-inner{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.page-block h1 {
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 0;
 }
 
-.page p {
+.page-block p {
     margin: 0;
     line-height: 1.7rem;
 }
 
 .welcome {
-
     text-align: center;
-
-
 }
 
 .site-image {
@@ -307,14 +322,13 @@ main section:not(:first-child){
 }
 
 /* Фиксированное положение меню сверху*/
-.fixed {
+.top-fixed {
     position: fixed;
     top: 0;
     z-index: 10;
     overflow: hidden;
     margin: 0;
     background: white;
-
 }
 
 /* Фиксированное положение меню снизу */
