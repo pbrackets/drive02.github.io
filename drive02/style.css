@@ -2,50 +2,57 @@ html, body {
     min-height: 100%;
     width: 100%;
 }
+
 html {
     font-size: 25px;
+    background: #f7f7f7;
 }
+
 body {
     font-family: "PTSansRegular", Arial, sans-serif;
 }
-
-
-
 
 
 a {
     text-decoration-line: none;
     color: black;
 }
+
 main {
     font-size: 1.6rem;
 }
+main section:not(:first-child){
+    margin-top: 5rem;
+}
 
-.main-menu{
+.main-menu {
     width: 100%;
     margin: 0;
 }
 
-.header{
+.header {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
     width: 100%;
     background-color: #F5F5F5F5;
     padding: 0.5rem;
+    box-shadow: 0 1.5rem 0.5rem -1rem rgba(0, 0, 0, 0.1);
 }
-.header li{
+
+.header li {
     list-style: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin: 0 1.2rem;
 }
-.categories::before{
+
+.header::before {
     content: "";
     position: absolute;
     width: 10.6rem;
     height: 6rem;
-    left: 0;
-    top: 0.7rem;
+    left: 1rem;
+    top: 0.5rem;
     background-size: contain;
     background-image: url("logo-white.png");
     background-repeat: no-repeat;
@@ -55,39 +62,52 @@ main {
 .page {
     margin: 8rem 3rem 7rem 3rem;
     height: auto;
-
-
 }
+
 .page h1 {
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     margin-bottom: 0;
 }
+
 .page p {
     margin: 0;
+    line-height: 1.7rem;
 }
-.welcome{
+
+.welcome {
 
     text-align: center;
 
 
 }
-.site-image{
+
+.site-image {
     width: 23.5rem;
 }
+
+.welcome-header h1 {
+    font-size: 2.5rem;
+}
+
 .welcome-highlights h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-align: left;
     margin: 1rem 0 0 3rem;
 }
+
 .welcome-highlights p {
+    font-size: 1.4rem;
     text-align: left;
-    margin: 0 0 0 3rem ;
+    margin: 0 0 0 3rem;
+
 }
-.welcome-highlight{
+
+.welcome-highlight {
     position: relative;
 }
-.icon-planet::before{
+
+.icon-planet::before {
     content: "";
     position: absolute;
     width: 2rem;
@@ -98,7 +118,8 @@ main {
     background-image: url("planet.svg");
     background-repeat: no-repeat;
 }
-.icon-bag::before{
+
+.icon-bag::before {
     content: "";
     position: absolute;
     width: 2rem;
@@ -109,7 +130,8 @@ main {
     background-image: url("bag.svg");
     background-repeat: no-repeat;
 }
-.icon-camera::before{
+
+.icon-camera::before {
     content: "";
     position: absolute;
     width: 2rem;
@@ -122,91 +144,121 @@ main {
 }
 
 
-
 .practice-and-theory p {
     text-align: center;
     align-items: center;
 }
+
 .groups li {
     list-style: none;
+    line-height: 1.7rem;
 
 }
-.groups li::before{
-    content: ">" ;
-}
 
-.cost-of-training li{
-    list-style: none;
-    padding: 0;
-}
-.cost-of-training li::before{
+.groups li::before {
     content: ">";
 }
-.our-advantages{
+
+.cost-of-training li {
+    list-style: none;
+    padding: 0;
+    line-height: 1.7rem;
+}
+
+.cost-of-training li::before {
+    content: ">";
+}
+
+.our-advantages {
     text-align: left;
 }
-.aside-link-block{
-    padding: 0.4rem;
-}
-.container {
+
+.aside-container {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    height: 3rem;
-    justify-content: flex-start;
-    margin-left: 3rem;
-}
-.container li {
-    list-style: none;
-    font-size: 1.8rem;
-    margin: 0.4rem 1rem 0 1rem;
+    align-items: center;
+    margin: auto 0.5rem;
 }
 
-.link-whatsapp-tel-number::before{
+.aside-button {
+    font-size: 1.5rem;
+
+}
+.aside-button:first-child{
+    margin-right: 1rem;
+}
+.aside-button:last-child{
+    flex-grow: 1;
+    display: flex;
+}
+
+.link-whatsapp-tel-number{
+    display: block;
+    position: relative;
+    width: 4rem;
+    height: 3rem;
+}
+.link-whatsapp-tel-number::before {
     content: "";
     position: absolute;
     width: 3rem;
     height: 3rem;
     left: 0;
-    top: 0.3rem;
+    top: 0;
     background-size: contain;
     background-image: url("logo-whatsapp.jpg");
     background-repeat: no-repeat;
+
 }
-.link-whatsapp-tel-number::after{
+
+.link-whatsapp-tel-number::after {
     position: absolute;
     content: "";
     top: 50%;
-    left: 3rem;
+    right: 0;
     transform: translateY(-50%);
     width: 0.2rem;
     height: 100%;
     background-color: #eaeaea;
 }
 
-.link-city-tel-number::before{
+.link-city-tel-number{
+    display: block;
+    position: relative;
+    padding-left: 3rem;
+}
+.link-city-tel-number::before {
     content: "";
     position: absolute;
     width: 2.6rem;
     height: 2.6rem;
-    left: 3.5rem;
-    top: 0.5rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     background-size: contain;
     background-image: url("logo-tell.png");
     background-repeat: no-repeat;
+
 }
-.link-city-tel-number::after{
+
+.link-application::before{
     position: absolute;
     content: "";
     top: 50%;
-    left: 19rem;
+    left: 0;
     transform: translateY(-50%);
     width: 0.2rem;
     height: 100%;
     background-color: #eaeaea;
 }
-.link-application{
+
+.link-application {
+    position: relative;
     white-space: nowrap;
+    display: block;
+    margin-left: auto;
+    padding-left: 1rem;
 }
 
 .right-blue-icon::after {
@@ -224,6 +276,7 @@ main {
     background-color: initial;
     z-index: 10;
 }
+
 .right-blue-icon {
     display: inline-block;
     position: relative;
@@ -236,6 +289,7 @@ main {
     margin-left: 2rem;
     background-image: initial;
 }
+
 .left-red-icon {
     display: inline-block;
     width: 2.6rem;
@@ -255,65 +309,72 @@ main {
 /* Фиксированное положение меню сверху*/
 .fixed {
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 10;
     overflow: hidden;
     margin: 0;
     background: white;
-    border: 1px solid #333; /* Параметры рамки */
+
 }
+
 /* Фиксированное положение меню снизу */
-.fix {
+.aside-link-block {
     position: fixed;
     right: 0; /* Расстояние от правого края окна браузера */
-    left:0;
-    bottom:0;
+    left: 0;
+    bottom: 0;
+    height: 4.5rem;
     background: white; /* Цвет фона */
-    border: 1px solid #333; /* Параметры рамки */
+    box-shadow: 0 1.5rem 1rem 2rem rgba(0, 0, 0, 0.1);
+    display: flex;
 }
 
-.welcome-sign-up{
-    display: none;
-}
 
-@media  (max-resolution: 1.5dppx), (-webkit-max-device-pixel-ratio: 1.5) {
+@media (max-resolution: 1.5dppx), (-webkit-max-device-pixel-ratio: 1.5) {
     html {
         font-size: 10px;
     }
-    .aside-link-block{
+
+    .aside-link-block {
         display: none;
     }
 
-    .welcome{
+    .welcome {
         margin: 5rem;
         display: grid;
         grid-template-columns: 40rem auto auto;
         grid-template-rows: auto auto;
         gap: 2rem 2rem;
     }
-    .welcome-header{
+
+    .welcome-header {
         grid-column: 1/2;
         grid-row: 1/2;
     }
-    .welcome-highlights{
+
+    .welcome-highlights {
         grid-column: 1/2;
         grid-row: 2/3;
     }
-    .welcome-image{
+
+    .welcome-image {
         grid-column: 2/3;
         grid-row: 1/3;
         display: flex;
     }
-    .site-image{
+
+    .site-image {
         margin: auto;
         width: 30rem;
     }
-    .welcome-sign-up{
+
+    .welcome-sign-up {
         grid-column: 3/3;
         grid-row: 2/3;
         display: flex;
     }
-    .sign-up{
+
+    .sign-up {
         margin: auto;
     }
 
