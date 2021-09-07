@@ -1,3 +1,8 @@
+:root {
+    --max-width: 100rem;
+    --main-horizontal-margin: 2rem;
+}
+
 html, body {
     min-height: 100%;
     width: 100%;
@@ -26,6 +31,7 @@ main section:not(:first-child){
 }
 
 .main-menu {
+    display: flex;
     width: 100%;
     margin: 0;
     box-shadow: 0 1.5rem 0.5rem -1rem rgba(0, 0, 0, 0.1);
@@ -36,9 +42,11 @@ main section:not(:first-child){
     flex-wrap: nowrap;
     justify-content: flex-end;
     width: 100%;
-    background-color: #F5F5F5F5;
-    padding: 0.5rem;
-
+    background-color: white;
+    padding: 0.5rem var(--main-horizontal-margin);
+    max-width: var(--max-width);
+    position: relative;
+    margin: 0 auto;
 }
 
 .header li {
@@ -58,13 +66,16 @@ main section:not(:first-child){
     height: 50%;
     background-color: #eaeaea;
 }
+.header li:last-child{
+    padding-right: 0;
+}
 
 .header::before {
     content: "";
     position: absolute;
     width: 10.6rem;
     height: 6rem;
-    left: 1rem;
+    left: var(--main-horizontal-margin);
     top: 0.5rem;
     background-size: contain;
     background-image: url("logo-white.png");
@@ -75,12 +86,13 @@ main section:not(:first-child){
 
 .page-block {
     display: flex;
-    margin: 8rem 3rem 7rem 3rem;
+    margin: 8rem var(--main-horizontal-margin) 7rem var(--main-horizontal-margin);
     height: auto;
 }
 .page-block-inner{
-    max-width: 120rem;
+    max-width: var(--max-width);
     margin: 0 auto;
+    flex-grow: 1;
 }
 .page-block h1 {
     text-align: center;
@@ -121,7 +133,9 @@ main section:not(:first-child){
 .welcome-highlight {
     position: relative;
 }
-
+.welcome-sign-up{
+    display: none;
+}
 .icon-planet::before {
     content: "";
     position: absolute;
@@ -325,7 +339,7 @@ main section:not(:first-child){
 .top-fixed {
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     overflow: hidden;
     margin: 0;
     background: white;
@@ -354,7 +368,7 @@ main section:not(:first-child){
     }
 
     .welcome {
-        margin: 5rem;
+        margin: 5rem 0;
         display: grid;
         grid-template-columns: 40rem auto auto;
         grid-template-rows: auto auto;
@@ -391,6 +405,8 @@ main section:not(:first-child){
     .sign-up {
         margin: auto;
     }
-
+    .link-application::before{
+        display: none;
+    }
 
 }
