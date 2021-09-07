@@ -26,51 +26,30 @@ a {
 main {
     font-size: 1.4rem;
 }
-main section:not(:first-child){
+
+main section:not(:first-child) {
     margin-top: 5rem;
 }
 
-.main-menu {
+.header-nav {
     display: flex;
     width: 100%;
     margin: 0;
     box-shadow: 0 1.5rem 0.5rem -1rem rgba(0, 0, 0, 0.1);
 }
 
-.header {
+.header-nav-inner {
+    flex-grow: 1;
+    max-width: var(--max-width);
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    width: 100%;
-    background-color: white;
-    padding: 0.5rem var(--main-horizontal-margin);
-    max-width: var(--max-width);
     position: relative;
     margin: 0 auto;
+    padding: 0 var(--main-horizontal-margin);
 }
 
-.header li {
-    list-style: none;
-    font-size: 1.5rem;
-    margin: 0 0 0 1.2rem;
-    padding-right: 1.2rem;
-    position: relative;
-}
-.header li:not(:last-child)::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 0.2rem;
-    height: 50%;
-    background-color: #eaeaea;
-}
-.header li:last-child{
-    padding-right: 0;
-}
-
-.header::before {
+.header-nav-inner::before {
     content: "";
     position: absolute;
     width: 10.6rem;
@@ -82,6 +61,42 @@ main section:not(:first-child){
     background-repeat: no-repeat;
 }
 
+.header-info {
+    display: none;
+}
+
+.header-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    background-color: white;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+.header-menu li {
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 0 0 0 1.2rem;
+    padding-right: 1.2rem;
+    position: relative;
+}
+
+.header-menu li:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 1px;
+    transform: translateY(-50%);
+    width: 0.2rem;
+    height: 50%;
+    background-color: #eaeaea;
+
+}
+
+.header-menu li:last-child {
+    padding-right: 0;
+}
 
 
 .page-block {
@@ -89,11 +104,13 @@ main section:not(:first-child){
     margin: 8rem var(--main-horizontal-margin) 7rem var(--main-horizontal-margin);
     height: auto;
 }
-.page-block-inner{
+
+.page-block-inner {
     max-width: var(--max-width);
     margin: 0 auto;
     flex-grow: 1;
 }
+
 .page-block h1 {
     text-align: center;
     font-size: 2.2rem;
@@ -133,9 +150,11 @@ main section:not(:first-child){
 .welcome-highlight {
     position: relative;
 }
-.welcome-sign-up{
+
+.welcome-sign-up {
     display: none;
 }
+
 .icon-planet::before {
     content: "";
     position: absolute;
@@ -181,7 +200,6 @@ main section:not(:first-child){
 .groups li {
     list-style: none;
     line-height: 1.7rem;
-
 }
 
 .groups li::before {
@@ -214,20 +232,23 @@ main section:not(:first-child){
     font-size: 1.5rem;
 
 }
-.aside-button:first-child{
+
+.aside-button:first-child {
     margin-right: 1rem;
 }
-.aside-button:last-child{
+
+.aside-button:last-child {
     flex-grow: 1;
     display: flex;
 }
 
-.link-whatsapp-tel-number{
+.link-whatsapp-tel-number {
     display: block;
     position: relative;
     width: 4rem;
     height: 3rem;
 }
+
 .link-whatsapp-tel-number::before {
     content: "";
     position: absolute;
@@ -241,7 +262,7 @@ main section:not(:first-child){
 
 }
 
-.link-whatsapp-tel-number::after {
+.aside-button .link-whatsapp-tel-number::after {
     position: absolute;
     content: "";
     top: 50%;
@@ -252,11 +273,12 @@ main section:not(:first-child){
     background-color: #eaeaea;
 }
 
-.link-city-tel-number{
+.link-city-tel-number {
     display: block;
     position: relative;
     padding-left: 3rem;
 }
+
 .link-city-tel-number::before {
     content: "";
     position: absolute;
@@ -271,7 +293,7 @@ main section:not(:first-child){
 
 }
 
-.link-application::before{
+.aside-button .link-application::before {
     position: absolute;
     content: "";
     top: 50%;
@@ -367,6 +389,34 @@ main section:not(:first-child){
         display: none;
     }
 
+    .header-nav-inner {
+        justify-content: space-between;
+
+    }
+
+    .header-info {
+        display: block;
+        margin-left: calc(12rem + var(--main-horizontal-margin));
+        padding-left: 1rem;
+        border-left: 0.5rem solid #eee;
+        height: 3.7rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: #555;
+    }
+
+    .info-city-tel-number,
+    .info-whatsapp-tel-number{
+        color: #48639a;
+        font-weight: 600;
+    }
+
+    .header-info p {
+        font-size: 1rem;
+        margin: 0;
+
+    }
+
     .welcome {
         margin: 5rem 0;
         display: grid;
@@ -405,7 +455,8 @@ main section:not(:first-child){
     .sign-up {
         margin: auto;
     }
-    .link-application::before{
+
+    .link-application::before {
         display: none;
     }
 
