@@ -1,5 +1,6 @@
 :root {
     --max-width: 100rem;
+    --min-width: 75rem;
     --main-horizontal-margin: 2rem;
 }
 
@@ -17,7 +18,13 @@ body {
     font-family: "PTSansRegular", Arial, sans-serif;
 }
 
-
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
 a {
     text-decoration-line: none;
     color: black;
@@ -32,6 +39,7 @@ main section:not(:first-child) {
 }
 
 .header-nav {
+    height: 5rem;
     display: flex;
     width: 100%;
     margin: 0;
@@ -53,7 +61,7 @@ main section:not(:first-child) {
     content: "";
     position: absolute;
     width: 10.6rem;
-    height: 6rem;
+    height: 4rem;
     left: var(--main-horizontal-margin);
     top: 0.5rem;
     background-size: contain;
@@ -71,7 +79,7 @@ main section:not(:first-child) {
     justify-content: flex-end;
     background-color: white;
     padding: 0.5rem 0;
-    margin: 0;
+    margin: auto 0;
 }
 
 .header-menu li {
@@ -198,7 +206,6 @@ main section:not(:first-child) {
 }
 
 .groups li {
-    list-style: none;
     line-height: 1.7rem;
 }
 
@@ -207,12 +214,15 @@ main section:not(:first-child) {
 }
 
 .cost-of-training li {
-    list-style: none;
     padding: 0;
     line-height: 1.7rem;
 }
 
 .cost-of-training li::before {
+    content: ">";
+}
+
+.discounts li::before {
     content: ">";
 }
 
@@ -379,19 +389,23 @@ main section:not(:first-child) {
     display: flex;
 }
 
+.footer-nav{
+    display: none;
+}
 
 @media (max-resolution: 1.5dppx), (-webkit-max-device-pixel-ratio: 1.5) {
     html {
         font-size: 10px;
     }
-
+   
     .aside-link-block {
         display: none;
     }
-
+    .header-nav{
+        min-width: var(--min-width);
+    }
     .header-nav-inner {
         justify-content: space-between;
-
     }
 
     .header-info {
@@ -399,16 +413,14 @@ main section:not(:first-child) {
         margin-left: calc(12rem + var(--main-horizontal-margin));
         padding-left: 1rem;
         border-left: 0.5rem solid #eee;
-        height: 3.7rem;
+        height: 7.7rem;
         margin-top: auto;
-        margin-bottom: auto;
         color: #555;
     }
 
     .info-city-tel-number,
     .info-whatsapp-tel-number{
         color: #48639a;
-        font-weight: 600;
     }
 
     .header-info p {
@@ -451,7 +463,9 @@ main section:not(:first-child) {
         grid-row: 2/3;
         display: flex;
     }
-
+    .practice-and-theory p{
+        text-align: center;
+    }
     .sign-up {
         margin: auto;
     }
@@ -460,4 +474,16 @@ main section:not(:first-child) {
         display: none;
     }
 
+    .footer-nav{
+        display: block;
+        background: #efefef;
+        text-align: center;
+        /*box-shadow: 0 1.5rem 1rem 2rem rgba(0, 0, 0, 0.1);*/
+        padding: 2rem 1rem 0.5rem 1rem;
+    }
+    .developer a {
+        color: #48639a;
+        font-weight: bold;
+
+    }
 }
