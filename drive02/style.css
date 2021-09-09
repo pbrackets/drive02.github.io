@@ -388,6 +388,7 @@ main section:not(:first-child) {
     background: white; /* Цвет фона */
     box-shadow: 0 1.5rem 1rem 2rem rgba(0, 0, 0, 0.1);
     display: flex;
+    z-index: 10;
 }
 
 footer{
