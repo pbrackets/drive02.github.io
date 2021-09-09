@@ -1,6 +1,6 @@
 :root {
-    --max-width: 100rem;
-    --min-width: 75rem;
+    --max-width: auto;
+    --min-width: auto;
     --main-horizontal-margin: 2rem;
 }
 
@@ -49,6 +49,7 @@ main section:not(:first-child) {
 .header-nav-inner {
     flex-grow: 1;
     max-width: var(--max-width);
+    min-width: var(--min-width);
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
@@ -97,7 +98,7 @@ main section:not(:first-child) {
     right: 1px;
     transform: translateY(-50%);
     width: 0.2rem;
-    height: 50%;
+    height: 130%;
     background-color: #eaeaea;
 
 }
@@ -389,33 +390,59 @@ main section:not(:first-child) {
     display: flex;
 }
 
+footer{
+    background: #efefef;
+    display: flex;
+    min-width: fit-content;
+}
 .footer-nav{
-    display: none;
+    display: block;
+    text-align: center;
+    /*box-shadow: 0 1.5rem 1rem 2rem rgba(0, 0, 0, 0.1);*/
+    padding: 2rem 1rem 0.5rem 1rem;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    margin: auto auto 6rem auto;
+    flex-grow: 1;
+}
+.developer{
+    opacity: 0.6;
+}
+.developer:hover{
+    opacity: 1;
+}
+.developer a {
+    color: #48639a;
+    font-weight: bold;
 }
 
 @media (max-resolution: 1.5dppx), (-webkit-max-device-pixel-ratio: 1.5) {
+    :root {
+        --max-width: 100rem;
+        --min-width: 90rem;
+    }
+
     html {
         font-size: 10px;
     }
-   
+
     .aside-link-block {
         display: none;
     }
-    .header-nav{
-        min-width: var(--min-width);
-    }
+
     .header-nav-inner {
         justify-content: space-between;
     }
 
     .header-info {
         display: block;
-        margin-left: calc(12rem + var(--main-horizontal-margin));
-        padding-left: 1rem;
-        border-left: 0.5rem solid #eee;
-        height: 7.7rem;
-        margin-top: auto;
         color: #555;
+        border-left: 0.5rem solid #eee;
+        height: 2.5rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: calc(12rem + var(--main-horizontal-margin));
+        padding: 0.3rem 0 0.3rem 1rem;
     }
 
     .info-city-tel-number,
@@ -473,17 +500,7 @@ main section:not(:first-child) {
     .link-application::before {
         display: none;
     }
-
     .footer-nav{
-        display: block;
-        background: #efefef;
-        text-align: center;
-        /*box-shadow: 0 1.5rem 1rem 2rem rgba(0, 0, 0, 0.1);*/
-        padding: 2rem 1rem 0.5rem 1rem;
-    }
-    .developer a {
-        color: #48639a;
-        font-weight: bold;
-
+        margin: auto;
     }
 }
