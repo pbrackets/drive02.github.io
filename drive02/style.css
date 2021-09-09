@@ -395,6 +395,7 @@ footer{
     background: #efefef;
     display: flex;
     min-width: fit-content;
+    font-size: 1rem;
 }
 .footer-nav{
     display: block;
@@ -435,15 +436,25 @@ footer{
         justify-content: space-between;
     }
 
+    .header-nav-inner::before {
+        height: 4.5rem;
+        top: 0.2rem;
+    }
+
     .header-info {
         display: block;
+        font-size: 1.3rem;
+        line-height: 1em;
         color: #555;
         border-left: 0.5rem solid #eee;
-        height: 2.5rem;
+        height: 2.7rem;
         margin-top: auto;
         margin-bottom: auto;
         margin-left: calc(12rem + var(--main-horizontal-margin));
         padding: 0.3rem 0 0.3rem 1rem;
+    }
+    .header-info-line:not(:last-child){
+        margin-bottom: 0.3rem;
     }
 
     .info-city-tel-number,
@@ -500,6 +511,9 @@ footer{
 
     .link-application::before {
         display: none;
+    }
+    footer{
+        font-size: 1.4rem;
     }
     .footer-nav{
         margin: auto;
